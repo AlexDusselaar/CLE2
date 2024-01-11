@@ -2,10 +2,16 @@
 require_once 'header.php';
 ?>
 
-    <section id="login">
-        <h2>Log in</h2>
+    <section id="register">
+        <h2>Registreren</h2>
         <div class="block">
             <form action="reserveren.php">
+
+                <div class="formfield">
+                    <label for="name">Naam</label>
+                    <input type="text" name="name" id="name">
+                </div>
+
                 <div class="formfield">
                     <label for="email">Email</label>
                     <input type="text" name="email" id="email">
@@ -16,17 +22,12 @@ require_once 'header.php';
                     <input type="password" name="password" id="password">
                 </div>
 
-                <button class="button" type="submit">Log in</button>
+                <button class="button" type="submit">Aanmaken</button>
             </form>
-            <h3>Of log in met:</h3>
-            <!-- social media icons -->
-
-            <h3>Nog geen account?</h3>
-            <a href="register.php" class="button">Maak een account aan</a>
         </div>
     </section>
 
-</body>
+    </body>
 
 <?php
 require_once 'footer.php';
