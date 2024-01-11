@@ -23,6 +23,10 @@ require_once 'header.php';
                 </div>
 
                 <button class="button" type="submit">Aanmaken</button>
+
+                <h3>Heeft u al een account?</h3>
+                <a href="login.php" class="button">Inloggen</a>
+
             </form>
         </div>
     </section>
