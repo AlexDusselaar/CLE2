@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  font-family: "Inria Serif", serif;
+}
+
+h1,
+h2,
+h3,
+a {
+  font-family: "Inria Serif", serif;
+}
+
+/* LOGO */
+
+.logo-text {
+  letter-spacing: 2px;
+}
+
+header h1 {
+  letter-spacing: 4px;
+}
+
+/* NAV */
+
+nav img {
+  width: auto;
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  border-bottom: #000 3px solid;
+  padding: 0.75vw;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  margin: 1vw;
+}
+
+.navlinks {
+  flex: 2;
+  flex-direction: flex-end;
+}
+
+.login {
+  background-color: #cdb5ac;
+  border-radius: 3px;
+}
+
+.login:hover {
+  background-color: #855e42;
+  transition: 0.3s ease;
+}
+
+nav div {
+  display: flex;
+}
+
+/* HEADER */
+
+header {
+  margin: 3vw 0;
+}
+
+header div {
+  display: flex;
+}
+
+header img {
+  width: auto;
+  height: 100px;
+}
+
+section a {
+  text-decoration: none;
+  color: #000;
+  border: #855e42 2px solid;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+header a {
+  text-decoration: none;
+  color: #000;
+  border: #cdb5ac 2px solid;
+  background-color: #cdb5ac;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+section a:hover {
+  background-color: #cdb5ac;
+  transition: 0.3s ease;
+}
+
+header a:hover {
+  background-color: #855e42;
+  transition: 0.3s ease;
+}
+
+/* FLEX */
+
+.flex {
+  display: flex;
+}
+
+#images {
+  flex: 1;
+  margin: 2vw;
+}
+
+.flex2 {
+  flex: 2;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #dedede;
+  padding: 1.5vw;
+}
+
+/* LOGIN */
+
+#login .button {
+  text-decoration: none;
+  font-family: "Inria Serif", serif;
+  color: #fff;
+  border: #855e42 2px solid;
+  background-color: #855e42;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+#login .button:hover {
+  background-color: #cdb5ac;
+  transition: 0.3s ease;
+}
+
+#login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formfield {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.block {
+  background-color: #cdb5ac;
+  padding: 2vw;
+  border-radius: 2px;
+}
