@@ -7,8 +7,8 @@ require_once 'include/header.php';
         <div class="block">
             <form action="reserveren.php">
                 <div class="formfield">
-                    <label for="name">Naam</label>
-                    <input type="text" name="name" id="name">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
                 </div>
 
                 <div class="formfield">
