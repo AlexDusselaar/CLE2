@@ -1,5 +1,5 @@
 <?php
-require_once 'header.php';
+require_once 'include/header.php';
 ?>
 
     <div class="flex">
@@ -25,12 +25,12 @@ require_once 'header.php';
             </header>
             <section id="more info">
                 <h3>Meer weten?</h3>
-                <a href="portfolio.php">Bekijk mijn portfolio</a>
+                <a href="portfolio.html">Bekijk mijn portfolio</a>
             </section>
         </div>
 
     </div>
 
 <?php
-require_once 'footer.php';
+require_once 'include/footer.php';
 ?>

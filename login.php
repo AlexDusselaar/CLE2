@@ -1,5 +1,5 @@
 <?php
-require_once 'header.php';
+require_once 'include/header.php';
 ?>
 
     <section id="login">
@@ -29,5 +29,5 @@ require_once 'header.php';
 </body>
 
 <?php
-require_once 'footer.php';
+require_once 'include/footer.php';
 ?>
