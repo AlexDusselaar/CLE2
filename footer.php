@@ -1,8 +1,6 @@
-
-    <footer>
-        <p>@LT-Interiors - 2024</p> <!-- jaartal via php?? -->
+ <footer>
+        <p>@LT-Interiors - <?=date("Y"); ?></p>
     </footer>
 </body>
-<!-- vervangen door include-->
 
 </html>
