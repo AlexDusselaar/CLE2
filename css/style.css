@@ -47,7 +47,6 @@ nav a {
 }
 
 .navlinks {
-  padding-top: 0.5vw;
   flex: 2;
   flex-direction: flex-end;
 }
