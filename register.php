@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
 <?php
 require_once 'include/header.php';
 ?>
-
+    <main>
     <section id="register">
         <h2>Registreren</h2>
         <div class="block">
@@ -75,7 +75,7 @@ require_once 'include/header.php';
             </form>
         </div>
     </section>
-
+    </main>
 
 <?php
 require_once 'include/footer.php';

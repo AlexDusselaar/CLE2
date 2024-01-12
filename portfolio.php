@@ -1,8 +1,9 @@
 <?php
 require_once 'include/header.php';
 ?>
-
-<p>Lege pagina :(</p>
+<main>
+    <p>Lege pagina :(</p>
+</main>
 
 <?php
 require_once 'include/footer.php';

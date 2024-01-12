@@ -31,7 +31,7 @@ if (empty($errors)) {
 
 
 <?php require_once 'include/header.php'?>
-
+<main>
 <section>
     <div>
         <h2 class="form">Reseveren</h2>
@@ -110,4 +110,5 @@ if (empty($errors)) {
 
     </div>
 </section>
+</main>
 <?php require_once 'include/footer.php'?>

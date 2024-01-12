@@ -1,7 +1,7 @@
 <?php
 require_once 'include/header.php';
 ?>
-
+<main>
     <section id="login">
         <h2>Log in</h2>
         <div class="block">
@@ -25,7 +25,7 @@ require_once 'include/header.php';
             <a href="register.php" class="button">Maak een account aan</a>
         </div>
     </section>
-
+</main>
 </body>
 
 <?php
