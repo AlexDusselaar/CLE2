@@ -205,17 +205,24 @@ footer {
 .imputfieldsbg {
   display: flex;
   justify-content: center;
+  gap: 3vw;
   background-color: #cdb5ac;
   margin: 2vw 25vw 0 25vw;
   padding: 2vw 2vw 0 2vw;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 #form label {
   color: #000;
 }
 
-#form input {
-  color: #000;
+input {
+  border-radius: 3px;
+  border: 1px solid;
+  font-family: "Inria Serif", serif;
+  padding: 5px;
+  margin-top: 3px;
 }
 
 #form button {
@@ -223,7 +230,9 @@ footer {
   border: #855e42 2px solid;
   background-color: #855e42;
   border-radius: 3px;
-  padding: 5px;
+  padding: 0.75vw 5vw;
+  font-family: "Inria Serif", serif;
+  font-size: 1rem;
 }
 
 #form button:hover {
@@ -237,4 +246,6 @@ footer {
   justify-content: center;
   padding: 2vw 20vw;
   margin: 0 25vw 10vw 25vw;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
