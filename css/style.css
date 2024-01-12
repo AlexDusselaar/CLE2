@@ -202,11 +202,11 @@ footer {
   justify-content: center;
 }
 
-#form {
+.imputfieldsbg {
   display: flex;
   justify-content: center;
   background-color: #cdb5ac;
-  margin: 2vw 25vw;
+  margin: 2vw 25vw 0 25vw;
   padding: 2vw 2vw 0 2vw;
 }
 
@@ -219,7 +219,16 @@ footer {
 }
 
 #form button {
+  color: #fff;
+  border: #855e42 2px solid;
+  background-color: #855e42;
+  border-radius: 3px;
+  padding: 5px;
+}
 
+#form button:hover {
+  background-color: #cdb5ac;
+  transition: 0.3s ease;
 }
 
 .submitbuttonbg {
@@ -227,4 +236,5 @@ footer {
   display: flex;
   justify-content: center;
   padding: 2vw 20vw;
+  margin: 0 25vw 10vw 25vw;
 }

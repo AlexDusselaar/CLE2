@@ -38,7 +38,7 @@ if (empty($errors)) {
 
         <section id="form">
             <form action="" method="post">
-
+            <div class="imputfieldsbg">
                 <div class="flex1">
                     <div class="formfield">
                         <label for="naam">Naam</label>
@@ -90,9 +90,10 @@ if (empty($errors)) {
                         </p>
                     </div>
                 </div>
+            </div>
 
                 <div class="submitbuttonbg">
-                        <button type="submit" name="submit">Reseveer</button>
+                        <button class="button" type="submit" name="submit">Reseveer</button>
                 </div>
             </form>
         </section>
