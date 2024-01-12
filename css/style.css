@@ -29,6 +29,7 @@ header h1 {
 /* NAV */
 
 nav img {
+  padding-top: 0.5vw;
   width: auto;
   height: 50px;
 }
@@ -46,6 +47,7 @@ nav a {
 }
 
 .navlinks {
+  padding-top: 0.5vw;
   flex: 2;
   flex-direction: flex-end;
 }
