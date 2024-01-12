@@ -5,10 +5,15 @@ require_once 'include/header.php';
     <div class="flex">
 
         <section id="images">
-            <img src="https://placehold.co/300x300" alt="placeholder">
-            <img src="https://placehold.co/300x300" alt="placeholder">
-            <img src="https://placehold.co/300x300" alt="placeholder">
-            <img src="https://placehold.co/300x300" alt="placeholder">
+            <div>
+                <img src="https://placehold.co/300x300" alt="placeholder">
+                <img src="https://placehold.co/300x300" alt="placeholder">
+            </div>
+                <img src="https://placehold.co/300x300" alt="placeholder">
+                <img src="https://placehold.co/300x300" alt="placeholder">
+            <div>
+
+            </div>
         </section>
 
         <div class="flex1">

@@ -82,6 +82,11 @@ header img {
   height: 100px;
 }
 
+header p {
+  max-width: 25vw;
+  font-size: 1.1rem;
+}
+
 section a {
   text-decoration: none;
   color: #000;
