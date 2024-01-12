@@ -51,7 +51,7 @@ if (empty($errors)) {
 
                     <div class="formfield">
                         <label for="vraag">Vraag</label>
-                        <input id="vraag" type="text" name="vraag" value="<?= $vraag ?? '' ?>"/>
+                        <textarea id="vraag" name="vraag" rows="7" cols="40" value="<?= $vraag ?? '' ?>"></textarea>
                         <p>
                             <?= $errors['tijd'] ?? '' ?>
                         </p>
@@ -59,6 +59,16 @@ if (empty($errors)) {
                 </div>
 
                 <div class="flex2">
+
+                    <div class="formfield">
+                        <label for="email">Email</label>
+                        <input id="email" type="text" name="email"
+                               value="<?= $email ?? '' ?>"/>
+                        <p>
+                            <?= $errors['email'] ?? '' ?>
+                        </p>
+                    </div>
+
                     <div class="formfield">
                         <label for="datum">Datum</label>
                         <input id="datum" type="date" name="datum"

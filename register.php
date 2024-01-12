@@ -31,8 +31,6 @@ if (isset($_POST['submit'])) {
 ?>
 
 
-
-
 <?php
 require_once 'include/header.php';
 ?>
