@@ -36,7 +36,7 @@ nav img {
 nav {
   display: flex;
   border-bottom: #000 3px solid;
-  padding: 0.75vw;
+  padding-left: 0.75vw;
 }
 
 nav a {
@@ -52,12 +52,12 @@ nav a {
 
 .login {
   background-color: #cdb5ac;
-  border-radius: 3px;
 }
 
 .login:hover {
   background-color: #855e42;
   transition: 0.3s ease;
+  color: white;
 }
 
 nav div {
