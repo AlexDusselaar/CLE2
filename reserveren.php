@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
     echo '<script>alert("je resevering is gemaakt");window.location.href="./index.php"</script>';
 
     /** @var mysqli $db */
-    require_once "includes/connection.php";
+    require_once "include/connection.php";
 
 $naam = $_POST['naam'];
 $datum = $_POST['datum'];
