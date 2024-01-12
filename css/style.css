@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+main {
+  min-height: 80vh;
+}
+
 body {
   margin: auto;
   font-family: "Inria Serif", serif;
