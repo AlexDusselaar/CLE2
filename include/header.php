@@ -18,6 +18,6 @@
             <a href="./reserveren.php">Reserveren</a>
         </div>
         <div class="login">
-            <a href="../login.php">Inloggen</a>
+            <a href="./login.php">Inloggen</a>
         </div>
     </nav>

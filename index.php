@@ -25,7 +25,7 @@ require_once 'include/header.php';
             </header>
             <section id="more info">
                 <h3>Meer weten?</h3>
-                <a href="portfolio.html">Bekijk mijn portfolio</a>
+                <a href="portfolio.php">Bekijk mijn portfolio</a>
             </section>
         </div>
 
