@@ -36,7 +36,6 @@ if (isset($_POST['submit'])) {
 <?php
 require_once 'include/header.php';
 ?>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
     <section id="register">
         <h2>Registreren</h2>
