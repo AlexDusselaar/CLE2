@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
     echo '<script>alert("je resevering is gemaakt");window.location.href="./index.php"</script>';
 
     /** @var mysqli $db */
-    require_once "includes/connection.php";
+    require_once "include/connection.php";
 
 $naam = $_POST['naam'];
 $datum = $_POST['datum'];
@@ -45,12 +45,12 @@ if (empty($errors)) {
 
                 <div class="field is-horizontal">
                     <div class="field-label is-normal">
-                        <label class="label" for="game">naam</label>
+                        <label class="label" for="name">naam</label>
                     </div>
                     <div class="field-body">
                         <div class="field">
                             <div class="control has-icons-left">
-                                <input class="input" id="naam" type="text" name="naam"
+                                <input class="input" id="name" type="text" name="naam"
                                        value="<?= $naam ?? '' ?>"/>
                                 <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
                             </div>
@@ -63,7 +63,7 @@ if (empty($errors)) {
 
                 <div class="field is-horizontal">
                     <div class="field-label is-normal">
-                        <label class="label" for="genre">datum</label>
+                        <label class="label" for="datum">datum</label>
                     </div>
                     <div class="field-body">
                         <div class="field">
@@ -81,7 +81,7 @@ if (empty($errors)) {
 
                 <div class="field is-horizontal">
                     <div class="field-label is-normal">
-                        <label class="label" for="link">tijd</label>
+                        <label class="label" for="tijd">tijd</label>
                     </div>
                     <div class="field-body">
                         <div class="field">
