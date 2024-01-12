@@ -31,6 +31,7 @@ header h1 {
 nav img {
   width: auto;
   height: 50px;
+  margin-top: 0.25vw;
 }
 
 nav {
@@ -47,18 +48,19 @@ nav a {
 
 .navlinks {
   flex: 2;
-  flex-direction: flex-end;
+  align-items: center;
 }
 
 .login {
   background-color: #cdb5ac;
+  padding: 0.25vw;
 }
 
 .login:hover {
   background-color: #855e42;
   transition: 0.3s ease;
-  color: white;
 }
+
 
 nav div {
   display: flex;
