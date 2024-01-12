@@ -31,75 +31,67 @@ if (empty($errors)) {
 
 
 <?php require_once 'include/header.php'?>
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <title>reseveren</title>
-</head>
-<section class="section">
-    <div class="container content">
-        <h2 class="title">reseveren</h2>
 
-        <section class="columns">
-            <form class="column is-6" action="" method="post">
+<section>
+    <div>
+        <h2 class="form">Reseveren</h2>
 
-                <div class="field is-horizontal">
-                    <div class="field-label is-normal">
-                        <label class="label" for="game">naam</label>
+        <section id="form">
+            <form action="" method="post">
+
+                <div class="flex1">
+                    <div>
+                        <label for="naam">Naam</label>
+                        <input id="naam" type="text" name="naam"
+                               value="<?= $naam ?? '' ?>"/>
+                        <p>
+                            <?= $errors['naam'] ?? '' ?>
+                        </p>
                     </div>
-                    <div class="field-body">
-                        <div class="field">
-                            <div class="control has-icons-left">
-                                <input class="input" id="naam" type="text" name="naam"
-                                       value="<?= $naam ?? '' ?>"/>
-                                <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
-                            </div>
-                            <p class="help is-danger">
-                                <?= $errors['naam'] ?? '' ?>
-                            </p>
-                        </div>
+
+                    <div>
+                        <label for="vraag">vraag</label>
+                        <input id="vraag" type="text" name="vraag" value="<?= $vraag ?? '' ?>"/>
+                        <p>
+                            <?= $errors['tijd'] ?? '' ?>
+                        </p>
                     </div>
                 </div>
 
-                <div class="field is-horizontal">
-                    <div class="field-label is-normal">
-                        <label class="label" for="genre">datum</label>
+                <div class="flex2">
+                    <div>
+                        <label for="datum">Datum</label>
+                        <input id="datum" type="date" name="datum"
+                               value="<?= $datum ?? '' ?>"/>
+                        <p>
+                            <?= $errors['datum'] ?? '' ?>
+                        </p>
                     </div>
-                    <div class="field-body">
-                        <div class="field">
-                            <div class="control has-icons-left">
-                                <input class="input" id="datum" type="date" name="datum"
-                                       value="<?= $datum ?? '' ?>"/>
-                                <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
-                            </div>
-                            <p class="help is-danger">
-                                <?= $errors['datum'] ?? '' ?>
-                            </p>
-                        </div>
+
+                    <div>
+                        <label for="tijd">Tijd</label>
+                        <input id="tijd" type="time" name="tijd" value="<?= $tijd ?? '' ?>"/>
+                        <p>
+                            <?= $errors['tijd'] ?? '' ?>
+                        </p>
+                    </div>
+
+                    <div>
+                        <label for="tijd">Tijd</label>
+                        <select id="tijd" name="tijd">
+                            <option value="" disabled selected>Kies een tijd</option>
+                            <option value="optie1">optie1</option>
+                            <option value="optie2">optie2</option>
+                            <option value="optie3">optie3</option>
+                        </select>
+                        <p>
+                            <?= $errors['tijd'] ?? '' ?>
+                        </p>
                     </div>
                 </div>
 
-                <div class="field is-horizontal">
-                    <div class="field-label is-normal">
-                        <label class="label" for="link">tijd</label>
-                    </div>
-                    <div class="field-body">
-                        <div class="field">
-                            <div class="control has-icons-left">
-                                <input class="input" id="tijd" type="time" name="tijd" value="<?= $tijd ?? '' ?>"/>
-                                <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
-                            </div>
-                            <p class="help is-danger">
-                                <?= $errors['tijd'] ?? '' ?>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="field is-horizontal">
-                    <div class="field-label is-normal"></div>
-                    <div class="field-body">
-                        <button class="button is-link is-fullwidth" type="submit" name="submit">reseveer</button>
-                    </div>
+                <div>
+                        <button type="submit" name="submit">Reseveer</button>
                 </div>
             </form>
         </section>

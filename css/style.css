@@ -120,6 +120,9 @@ header a:hover {
   margin: 2vw;
 }
 
+.flex1 {
+  flex: 1;
+}
 .flex2 {
   flex: 2;
 }
@@ -190,4 +193,26 @@ footer {
   flex-direction: column;
   align-items: center;
   margin: 3vw 0 6vw 0;
+}
+
+/* RESERVEREN */
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  background-color: #cdb5ac;
+  padding: 2vw;
+}
+
+label {
+  color: #000;
+}
+
+input {
+  color: #000;
 }
