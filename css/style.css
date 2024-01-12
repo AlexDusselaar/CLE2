@@ -206,13 +206,25 @@ footer {
   display: flex;
   justify-content: center;
   background-color: #cdb5ac;
-  padding: 2vw;
+  margin: 2vw 25vw;
+  padding: 2vw 2vw 0 2vw;
 }
 
-label {
+#form label {
   color: #000;
 }
 
-input {
+#form input {
   color: #000;
+}
+
+#form button {
+
+}
+
+.submitbuttonbg {
+  background-color: #dedede;
+  display: flex;
+  justify-content: center;
+  padding: 2vw 20vw;
 }

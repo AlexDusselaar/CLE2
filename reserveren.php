@@ -40,7 +40,7 @@ if (empty($errors)) {
             <form action="" method="post">
 
                 <div class="flex1">
-                    <div>
+                    <div class="formfield">
                         <label for="naam">Naam</label>
                         <input id="naam" type="text" name="naam"
                                value="<?= $naam ?? '' ?>"/>
@@ -49,8 +49,8 @@ if (empty($errors)) {
                         </p>
                     </div>
 
-                    <div>
-                        <label for="vraag">vraag</label>
+                    <div class="formfield">
+                        <label for="vraag">Vraag</label>
                         <input id="vraag" type="text" name="vraag" value="<?= $vraag ?? '' ?>"/>
                         <p>
                             <?= $errors['tijd'] ?? '' ?>
@@ -59,7 +59,7 @@ if (empty($errors)) {
                 </div>
 
                 <div class="flex2">
-                    <div>
+                    <div class="formfield">
                         <label for="datum">Datum</label>
                         <input id="datum" type="date" name="datum"
                                value="<?= $datum ?? '' ?>"/>
@@ -68,15 +68,16 @@ if (empty($errors)) {
                         </p>
                     </div>
 
+                    <!--
                     <div>
                         <label for="tijd">Tijd</label>
                         <input id="tijd" type="time" name="tijd" value="<?= $tijd ?? '' ?>"/>
                         <p>
                             <?= $errors['tijd'] ?? '' ?>
                         </p>
-                    </div>
+                    </div> -->
 
-                    <div>
+                    <div class="formfield">
                         <label for="tijd">Tijd</label>
                         <select id="tijd" name="tijd">
                             <option value="" disabled selected>Kies een tijd</option>
@@ -90,7 +91,7 @@ if (empty($errors)) {
                     </div>
                 </div>
 
-                <div>
+                <div class="submitbuttonbg">
                         <button type="submit" name="submit">Reseveer</button>
                 </div>
             </form>
