@@ -1,7 +1,7 @@
 <?php
 require_once 'include/header.php';
 ?>
-
+<main>
     <div class="flex">
 
         <section id="images">
@@ -35,7 +35,7 @@ require_once 'include/header.php';
         </div>
 
     </div>
-
+</main>
 <?php
 require_once 'include/footer.php';
 ?>
