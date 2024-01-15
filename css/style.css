@@ -60,7 +60,7 @@ nav a {
 }
 
 .login:hover {
-  background-color: #855e42;
+  background-color: #fff;
   transition: 0.3s ease;
 }
 
@@ -296,7 +296,7 @@ footer {
   font-size: 1.9rem;
 }
 
-.imputfieldsbg {
+.inputfieldsbg {
   display: flex;
   justify-content: center;
   gap: 3vw;
@@ -307,9 +307,7 @@ footer {
   border-top-right-radius: 3px;
 }
 
-#form label {
-  color: #000;
-}
+
 
 input,textarea,select {
   border-radius: 3px;
@@ -344,3 +342,90 @@ input,textarea,select {
   border-bottom-right-radius: 3px;
 }
 
+@media (max-width: 480px) {
+  .inputfieldsbg {
+    flex-direction: column;
+    gap: 0;
+  }
+
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #242528;
+  }
+  h1, h2, h3, a, p {
+    color: #fff;
+  }
+
+  img {
+    filter: invert(1);
+  }
+
+  #images img {
+    filter: invert(0);
+  }
+
+  footer {
+    background-color: #3a3b3c;
+  }
+
+  section a {
+    color: #fff;
+    border: #3a3b3c 3px solid;
+  }
+
+  section a:hover {
+    background-color: #3a3b3c;
+  }
+
+  header a {
+    color: #fff;
+    background-color: #3a3b3c;
+    border: #3a3b3c 2px solid;
+  }
+
+  header a:hover {
+    border: #242526 2px solid;
+    background-color: #86898d;
+  }
+
+  nav a {
+    color: #fff;
+  }
+
+  .login {
+    background-color: #3a3b3c;
+  }
+
+  .login:hover {
+    background-color: #242526;
+  }
+
+  .inputfieldsbg {
+    background-color: #3a3b3c;
+  }
+
+  .submitbuttonbg {
+    background-color: #86898d;
+  }
+
+  #reserveren .button, #login .button, #register .button {
+    background-color: #242526;
+    border: #242526 2px solid;
+  }
+
+  #reserveren .button:hover, #login .button:hover, #register .button:hover {
+    background-color: #3a3b3c;
+  }
+
+  .block {
+    background-color: #3a3b3c;
+  }
+
+  label {
+    color: #fff;
+  }
+
+}

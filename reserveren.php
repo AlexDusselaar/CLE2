@@ -43,7 +43,7 @@ if (empty($errors)) {
 
         <section id="form">
             <form action="" method="post">
-            <div class="imputfieldsbg">
+            <div class="inputfieldsbg">
                 <div class="flex1">
                     <div class="formfield">
                         <label for="naam">Naam</label>
