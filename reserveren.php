@@ -34,9 +34,12 @@ if (empty($errors)) {
 
 <?php require_once 'include/header.php'?>
 <main>
-<section>
+<section id="reserveren">
     <div>
         <h2 class="form">Reseveren</h2>
+        <!-- <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla nec tortor et ullamcorper. Sed pretium nisi et rutrum condimentum. Nulla a feugiat enim, at molestie nisl. Suspendisse eu leo dapibus quam venenatis finibus et non leo. Vivamus urna justo, iaculis vitae ornare at, finibus id risus. Praesent id mauris at ante pellentesque pellentesque. Aliquam erat volutpat. Quisque auctor ultrices porttitor. Proin sit amet fermentum dui, imperdiet tempus eros. Mauris semper enim vitae tellus mattis, quis euismod mi blandit. Suspendisse ex ante, posuere nec odio in, tristique euismod dui. Sed consectetur nunc eget metus porta, a scelerisque massa lobortis. Proin blandit sed sem eget sagittis. Donec porta cursus accumsan. Aenean sed rhoncus ex. Donec faucibus justo et velit posuere laoreet.
+        </p> -->
 
         <section id="form">
             <form action="" method="post">

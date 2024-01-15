@@ -283,6 +283,13 @@ footer {
 
 /* RESERVEREN */
 
+/* #reserveren p {
+  display: flex;
+  justify-content: center;
+  margin: 2vw 25vw 0 25vw;
+
+} */
+
 .form {
   display: flex;
   justify-content: center;
