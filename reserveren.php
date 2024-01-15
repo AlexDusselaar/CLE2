@@ -7,8 +7,10 @@ if (isset($_POST['submit'])) {
     require_once "include/connection.php";
 
 $naam = $_POST['naam'];
+$email = $_POST['email'];
 $datum = $_POST['datum'];
 $tijd = $_POST['tijd'];
+$vraag =$_POST['vraag'];
 
 $errors = [];
 if ($naam == "") {
@@ -21,8 +23,8 @@ if ($tijd == "") {
     $errors['link'] = "vul aub steam store link in";
 }
 if (empty($errors)) {
-    $query = "INSERT INTO reseveringen (naam, datum, tijd)
-                    VALUES('$naam', '$datum', '$tijd')";
+    $query = "INSERT INTO reseveringen (naam, email, vraag, datum, tijd)
+                    VALUES('$naam', '$email','$vraag', '$datum', '$tijd')";
     $result = mysqli_query($db, $query);
 }
 
@@ -53,7 +55,7 @@ if (empty($errors)) {
                         <label for="vraag">Vraag</label>
                         <textarea id="vraag" name="vraag" rows="7" cols="40" value="<?= $vraag ?? '' ?>"></textarea>
                         <p>
-                            <?= $errors['tijd'] ?? '' ?>
+                            <?= $errors['vraag'] ?? '' ?>
                         </p>
                     </div>
                 </div>
@@ -78,22 +80,13 @@ if (empty($errors)) {
                         </p>
                     </div>
 
-                    <!--
-                    <div>
-                        <label for="tijd">Tijd</label>
-                        <input id="tijd" type="time" name="tijd" value="<?= $tijd ?? '' ?>"/>
-                        <p>
-                            <?= $errors['tijd'] ?? '' ?>
-                        </p>
-                    </div> -->
-
                     <div class="formfield">
                         <label for="tijd">Tijd</label>
                         <select id="tijd" name="tijd">
                             <option value="" disabled selected>Kies een tijd</option>
-                            <option value="optie1">optie1</option>
-                            <option value="optie2">optie2</option>
-                            <option value="optie3">optie3</option>
+                            <option value=<?= $tijd ?? '15:00' ?>>15:00</option>
+                            <option value=<?= $tijd ?? '15:30' ?>>15:30</option>
+                            <option value=<?= $tijd ?? '16:00' ?>>16:00</option>
                         </select>
                         <p>
                             <?= $errors['tijd'] ?? '' ?>
