@@ -10,9 +10,11 @@
 
 <body>
     <nav>
-        <img src="./imgs/LT-interiors_logo.png" alt="logo">
         <div class="navlinks">
-            <a class="logo-text" href="./index.php">Interiors</a>
+            <div class="navlogo">
+                <img src="./imgs/LT-interiors_logo.png" alt="logo">
+                <a class="logo-text" href="./index.php">Interiors</a>
+            </div>
             <a href="./portfolio.php">Portfolio</a>
             <a href="./reserveren.php">Reserveren</a>
         </div>

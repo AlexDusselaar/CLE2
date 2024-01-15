@@ -35,7 +35,6 @@ header h1 {
 nav img {
   width: auto;
   height: 50px;
-  margin-top: 0.25vw;
 }
 
 nav {
@@ -70,6 +69,29 @@ nav div {
   display: flex;
 }
 
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .navlinks {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navlogo {
+    display: flex;
+    align-items: center;
+  }
+
+  .login {
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
 /* HEADER */
 
 header {
@@ -80,13 +102,17 @@ header div {
   display: flex;
 }
 
+.headerlogo {
+  align-items: center;
+  font-size: 1.3rem;
+}
+
 header img {
   width: auto;
   height: 100px;
 }
 
 header p {
-  max-width: 25vw;
   font-size: 1.1rem;
 }
 
@@ -95,7 +121,11 @@ section a {
   color: #000;
   border: #855e42 2px solid;
   border-radius: 3px;
-  padding: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  max-width: 25vw;
+  font-weight: bold;
 }
 
 header a {
@@ -104,7 +134,10 @@ header a {
   border: #cdb5ac 2px solid;
   background-color: #cdb5ac;
   border-radius: 3px;
-  padding: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
 }
 
 section a:hover {
@@ -115,6 +148,51 @@ section a:hover {
 header a:hover {
   background-color: #855e42;
   transition: 0.3s ease;
+}
+
+.headertext {
+  display: flex;
+  flex-direction: column;
+  max-width: 25vw;
+}
+
+@media (max-width: 480px) {
+  #images img {
+    max-height: 25vw;
+  }
+  #images {
+    max-width: 25vw;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .headertext {
+    max-width: 50vw;
+  }
+
+  #more\ info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5vw;
+  }
+
+  section a {
+    max-width: 50vw;
+  }
+
+  nav {
+    padding-left: 0;
+  }
+
+  .headerlogo img {
+    max-height: 20vw;
+  }
+
 }
 
 /* FLEX */
@@ -258,3 +336,4 @@ input,textarea,select {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
+
