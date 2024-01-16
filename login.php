@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $email = htmlentities($_POST['email']);
 
 
-    if (!$email == "") {
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         mysqli_escape_string($db,$password);
         $query = "SELECT wachtwoord, id FROM users WHERE email='$email'";
         $result = mysqli_query($db, $query)

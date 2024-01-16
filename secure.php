@@ -19,7 +19,7 @@ if (!$_SESSION == ''){
             <img src="./imgs/LT-interiors_logo.png" alt="logo">
             <a class="logo-text" href="./secure.php">Interiors</a>
         </div>
-        <a href="./reserveren.php">Reserveren</a>
+        <a href="./reserveringen.php">Reserveringen</a>
     </div>
     <div class="login">
         <a href="./index.php"><?php session_unset(); session_destroy();?>uitloggen</a>
@@ -46,7 +46,7 @@ if (!$_SESSION == ''){
                         Deskundig advies voor al uw interieurvragen. Reserveer nu en plan simpel en snel een tijd die voor u
                         uitkomt.
                     </p>
-                    <a href="reserveren.php">Reserveren</a>
+                    <a href="reserveringen.php">Reserveringen</a>
                 </div>
             </header>
         </div>

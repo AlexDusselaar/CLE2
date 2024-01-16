@@ -16,8 +16,8 @@ if (isset($_POST['submit'])) {
     if ($name == ""){
         $errors['name'] = "vul aub uw naam in";
     }
-    if ($email == "") {
-        $errors['email'] = "vul aub uw email in";
+    if ($email == "" || !filter_var($email, FILTER_VALIDATE_EMAIL) ) {
+        $errors['email'] = "vul aub een geldige email in";
     }
     if ($password == "") {
         $errors['password'] = "vul aub een wachtwoord in";
