@@ -19,7 +19,11 @@ if (isset($_POST['submit'])) {
     if ($email == "" || !filter_var($email, FILTER_VALIDATE_EMAIL) ) {
         $errors['email'] = "vul aub een geldige email in";
     }
-    if ($password == "") {
+    if (!$password == "") {
+        if (strlen($password)!=8 ) {
+            $errors['password'] = "wachtwoord moet groter zijn dan 8 letters";
+        }
+    } else {
         $errors['password'] = "vul aub een wachtwoord in";
     }
     $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
@@ -47,7 +51,8 @@ require_once 'include/header.php';
                 <div class="formfield">
                     <label for="name">Naam</label>
                     <input  id="name" type="text" name="name"
-                           value="<?= $name ?? '' ?>"/>
+                            value="<?= $name ?? '' ?>"
+                            placeholder="voer hier uw voor-en achternaam in"/>
                 </div>
                 <p class="help is-danger">
                     <?= $errors['name'] ?? '' ?>
@@ -55,7 +60,8 @@ require_once 'include/header.php';
 
                 <div class="formfield">
                     <label for="email">Email</label>
-                    <input id="email" type="text" name="email" value="<?= $email ?? '' ?>"/>
+                    <input id="email" type="text" name="email" value="<?= $email ?? '' ?>"
+                           placeholder="voer hier uw email in"/>
                 </div>
                 <p class="help is-danger">
                     <?= $errors['email'] ?? '' ?>
@@ -64,7 +70,8 @@ require_once 'include/header.php';
                 <div class="formfield">
                     <label for="password">Wachtwoord</label>
                     <input id="password" type="password" name="password"
-                           value="<?= $password ?? '' ?>"/>
+                           value="<?= $password ?? '' ?>"
+                           placeholder="voer hier een wachtwoord in"/>
                 </div>
 
                 <p class="help is-danger">
