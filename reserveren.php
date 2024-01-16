@@ -6,11 +6,11 @@ if (isset($_POST['submit'])) {
     /** @var mysqli $db */
     require_once "include/connection.php";
 
-$naam = $_POST['naam'];
-$email = $_POST['email'];
+$naam = htmlentities($_POST['naam']);
+$email = htmlentities($_POST['email']);
 $datum = $_POST['datum'];
 $tijd = $_POST['tijd'];
-$vraag =$_POST['vraag'];
+$vraag =htmlentities($_POST['vraag']);
 
 $errors = [];
 if ($naam == "") {
@@ -48,7 +48,7 @@ if (empty($errors)) {
                     <div class="formfield">
                         <label for="naam">Naam</label>
                         <input id="naam" type="text" name="naam"
-                               value="<?= $naam ?? '' ?>"/>
+                               value="<?= $naam ?? '' ?>" placeholder="voer hier voor- en achternaam in"/>
                         <p>
                             <?= $errors['naam'] ?? '' ?>
                         </p>
@@ -56,7 +56,9 @@ if (empty($errors)) {
 
                     <div class="formfield">
                         <label for="vraag">Vraag</label>
-                        <textarea id="vraag" name="vraag" rows="7" cols="40" value="<?= $vraag ?? '' ?>"></textarea>
+                        <textarea id="vraag" name="vraag" rows="7" cols="40"
+                                  value="<?= $vraag ?? '' ?>"
+                                  placeholder="zeg hier wat uw wilt doen met uw interieur"></textarea>
                         <p>
                             <?= $errors['vraag'] ?? '' ?>
                         </p>
@@ -68,7 +70,7 @@ if (empty($errors)) {
                     <div class="formfield">
                         <label for="email">Email</label>
                         <input id="email" type="text" name="email"
-                               value="<?= $email ?? '' ?>"/>
+                               value="<?= $email ?? '' ?>" placeholder="voer hier uw email in"/>
                         <p>
                             <?= $errors['email'] ?? '' ?>
                         </p>

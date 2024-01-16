@@ -7,6 +7,10 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+    mysqli_escape_string($db,$name);
+    mysqli_escape_string($db,$email);
+    mysqli_escape_string($db,$password);
+
 
     $errors = [];
     if ($name == ""){

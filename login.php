@@ -1,13 +1,13 @@
 <?php
-/** @var mysqli $db */
-require_once 'include/connection.php';
-
 if (isset($_POST['submit'])) {
-    $email = $_POST['email'];
-    $pass = $_POST['password'];
+    /** @var mysqli $db */
+    require_once 'include/connection.php';
+    $password = htmlentities($_POST['password']);
+    $email = htmlentities($_POST['email']);
 
 
     if (!$email == "") {
+        mysqli_escape_string($db,$password);
         $query = "SELECT wachtwoord, email FROM users WHERE email='$email'";
         $result = mysqli_query($db, $query)
         or die('Error ' . mysqli_error($db) . ' with query ' . $query);
@@ -15,14 +15,14 @@ if (isset($_POST['submit'])) {
             $hashedPassword = $row['wachtwoord'];
         }
 
-        if (password_verify($pass, $hashedPassword)) {
+        if (password_verify($password, $hashedPassword)) {
             header('Location: ./secure.php');
         }
 
     } else {
             $errors['password'] = "wachtwoord en/of email is incorect";
     }
-    if ($pass == "") {
+    if ($password == "") {
         $errors['password'] = "wachtwoord en/of email is incorect";
     }
 }
@@ -43,7 +43,7 @@ require_once 'include/header.php';
 
                 <div class="formfield">
                     <label for="password">Wachtwoord</label>
-                    <input id="password" type="password" name="password" value="<?= $pass ?? '' ?>" />
+                    <input id="password" type="password" name="password" value="<?= $password ?? '' ?>" />
                 </div>
                 <p class="help is-danger">
                     <?= $errors['password'] ?? '' ?>
