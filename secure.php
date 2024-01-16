@@ -33,15 +33,17 @@
 
         <div class="flex1">
             <header id="header">
-                <div>
+                <div class="headerlogo">
                     <img src="imgs/LT-interiors_logo.png" alt="logo">
                     <h1>Interiors</h1>
                 </div>
-                <p>
-                    Deskundig advies voor al uw interieurvragen. Reserveer nu en plan simpel en snel een tijd die voor u
-                    uitkomt.
-                </p>
-                <a href="reserveringen.php">Reserveringen</a>
+                <div class="headertext">
+                    <p>
+                        Deskundig advies voor al uw interieurvragen. Reserveer nu en plan simpel en snel een tijd die voor u
+                        uitkomt.
+                    </p>
+                    <a href="reserveren.php">Reserveren</a>
+                </div>
             </header>
         </div>
 
