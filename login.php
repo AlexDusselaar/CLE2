@@ -1,4 +1,5 @@
 <?php
+$login = false;
 if (isset($_POST['submit'])) {
     /** @var mysqli $db */
     require_once 'include/connection.php';
@@ -8,15 +9,18 @@ if (isset($_POST['submit'])) {
 
     if (!$email == "") {
         mysqli_escape_string($db,$password);
-        $query = "SELECT wachtwoord, email FROM users WHERE email='$email'";
+        $query = "SELECT wachtwoord, id FROM users WHERE email='$email'";
         $result = mysqli_query($db, $query)
         or die('Error ' . mysqli_error($db) . ' with query ' . $query);
         while ($row = mysqli_fetch_assoc($result)) {
             $hashedPassword = $row['wachtwoord'];
+            $userID = $row['id'];
         }
 
         if (password_verify($password, $hashedPassword)) {
-            header('Location: ./secure.php');
+            session_start();
+            $_SESSION['userid'] = $userID;
+            header('location: ./secure.php');
         }
 
     } else {
@@ -59,7 +63,6 @@ require_once 'include/header.php';
         </div>
     </section>
 </main>
-</body>
 
 <?php
 require_once 'include/footer.php';

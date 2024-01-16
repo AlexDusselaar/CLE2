@@ -1,3 +1,7 @@
+<?php
+session_start();
+if (!$_SESSION == ''){
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,12 +17,12 @@
     <div class="navlinks">
         <div class="navlogo">
             <img src="./imgs/LT-interiors_logo.png" alt="logo">
-            <a class="logo-text" href="./index.php">Interiors</a>
+            <a class="logo-text" href="./secure.php">Interiors</a>
         </div>
         <a href="./reserveren.php">Reserveren</a>
     </div>
     <div class="login">
-        <a href="./index.php">uitloggen</a>
+        <a href="./index.php"><?php session_unset(); session_destroy();?>uitloggen</a>
     </div>
 </nav>
 
@@ -50,5 +54,8 @@
     </div>
 
 <?php
+} else {
+    header('location: ./login.php');
+}
 require_once 'include/footer.php';
 ?>
