@@ -1,7 +1,32 @@
 <?php
+/** @var mysqli $db */
+require_once 'include/connection.php';
 session_start();
+$email = $_COOKIE['userEmail'];
+$admin = $_COOKIE['admin'];
+$_SESSION['userEmail'] = $email;
 if (!$_SESSION == ''){
-    ?>
+
+if ($admin) {
+    $query = "SELECT * FROM reseveringen";
+
+    $result = mysqli_query($db, $query)
+    or die('Error ' . mysqli_error($db) . ' with query ' . $query);
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        $reseveringen[] = $row;
+    }
+} else {
+    $query = "SELECT * FROM reseveringen WHERE email='$email' ";
+
+    $result = mysqli_query($db, $query)
+    or die('Error ' . mysqli_error($db) . ' with query ' . $query);
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        $reseveringen[] = $row;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,10 +52,41 @@ if (!$_SESSION == ''){
 </nav>
 
 <main>
-    <p>Lege pagina :(</p>
+    <table>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>naam</th>
+            <th>datum</th>
+            <th>tijd</th>
+            <th>vraag</th>
+            <th>opties</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <td colspan="6" class="has-text-centered">&copy; My Collection</td>
+        </tr>
+        </tfoot>
+        <tbody>
+        <?php foreach ($reseveringen as $index => $resevering) { ?>
+            <tr>
+                <td><?= $index + 1 ?></td>
+                <td><?= $resevering['naam']?>/td>
+                <td><?= $resevering['datum'] ?></td>
+                <td><?= $resevering['tijd'] ?></td>
+                <td><?= $resevering['vraag'] ?></td>
+                <td><a href="edit.php">edit</a> delete</td>
+            </tr>
+        <?php } ?>
+        </tbody>
+    </table>
 </main>
 
 <?php
+}
+else {
+    header('location: ./login.php');
 }
 require_once 'include/footer.php';
 ?>

@@ -19,7 +19,10 @@ if (isset($_POST['submit'])) {
 
         if (password_verify($password, $hashedPassword)) {
             session_start();
-            $_SESSION['userid'] = $userID;
+            if ($userID == 1){
+                $_SESSION['userid'] = $userID;
+            }
+            $_SESSION['userEmail'] = $email;
             header('location: ./secure.php');
         }
 
