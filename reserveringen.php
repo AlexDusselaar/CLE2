@@ -52,6 +52,8 @@ if ($admin) {
 </nav>
 
 <main>
+    <div class="reserveringentable">
+    <h2>Bekijk reserveringen</h2>
     <table>
         <thead>
         <tr>
@@ -64,9 +66,9 @@ if ($admin) {
         </tr>
         </thead>
         <tfoot>
-        <tr>
+        <!-- <tr>
             <td colspan="6" class="has-text-centered">&copy; My Collection</td>
-        </tr>
+        </tr> -->
         </tfoot>
         <tbody>
         <?php foreach ($reseveringen as $index => $resevering) { ?>
@@ -76,11 +78,17 @@ if ($admin) {
                 <td><?= $resevering['datum'] ?></td>
                 <td><?= $resevering['tijd'] ?></td>
                 <td><?= $resevering['vraag'] ?></td>
-                <td><a href="edit.php">edit</a> delete</td>
+                <td>
+                    <div>
+                        <a href="edit.php">edit</a>
+                        <a href="delete.php">delete</a>
+                    </div>
+                </td>
             </tr>
         <?php } ?>
         </tbody>
     </table>
+    </div>
 </main>
 
 <?php

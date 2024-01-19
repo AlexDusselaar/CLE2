@@ -350,6 +350,37 @@ input,textarea,select {
 
 }
 
+/*RESERVERINGEN*/
+
+.reserveringentable {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5vw;
+}
+
+table {
+  border-spacing: 0;
+}
+
+table div {
+  display: flex;
+  flex-direction: column;
+}
+
+th {
+  font-size: 1.3rem;
+  padding: 1vw;
+}
+
+td {
+  padding: 1vw;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #dedede;
+}
+
 /* DARK MODE */
 @media (prefers-color-scheme: dark) {
   body {
@@ -426,6 +457,14 @@ input,textarea,select {
 
   label {
     color: #fff;
+  }
+
+  table {
+    color: white;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: #3a3b3c;
   }
 
 }
