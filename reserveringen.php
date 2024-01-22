@@ -2,10 +2,14 @@
 /** @var mysqli $db */
 require_once 'include/connection.php';
 session_start();
+$userID = $_COOKIE['userid'];
 $email = $_COOKIE['userEmail'];
-$admin = $_COOKIE['admin'];
 $_SESSION['userEmail'] = $email;
+$admin = false;
 if (!$_SESSION == ''){
+    if ($userID == 1 ){
+        $admin = true;
+    }
 
 if ($admin) {
     $query = "SELECT * FROM reseveringen";
@@ -13,19 +17,16 @@ if ($admin) {
     $result = mysqli_query($db, $query)
     or die('Error ' . mysqli_error($db) . ' with query ' . $query);
 
-    while ($row = mysqli_fetch_assoc($result)) {
-        $reseveringen[] = $row;
-    }
 } else {
     $query = "SELECT * FROM reseveringen WHERE email='$email' ";
 
     $result = mysqli_query($db, $query)
     or die('Error ' . mysqli_error($db) . ' with query ' . $query);
-
+}
     while ($row = mysqli_fetch_assoc($result)) {
         $reseveringen[] = $row;
     }
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,13 +75,13 @@ if ($admin) {
         <?php foreach ($reseveringen as $index => $resevering) { ?>
             <tr>
                 <td><?= $index + 1 ?></td>
-                <td><?= $resevering['naam']?>/td>
+                <td><?= $resevering['naam']?></td>
                 <td><?= $resevering['datum'] ?></td>
                 <td><?= $resevering['tijd'] ?></td>
                 <td><?= $resevering['vraag'] ?></td>
                 <td>
                     <div>
-                        <a href="edit.php">edit</a>
+                        <a href="edit.php?id=<?= $index + 1 ?>">edit</a>
                         <a href="delete.php">delete</a>
                     </div>
                 </td>

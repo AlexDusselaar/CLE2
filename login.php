@@ -22,6 +22,7 @@ if (isset($_POST['submit'])) {
             if ($userID == 1){
                 $_SESSION['userid'] = $userID;
             }
+            $_SESSION['userid'] = $userID;
             $_SESSION['userEmail'] = $email;
             header('location: ./secure.php');
         }
@@ -44,7 +45,7 @@ require_once 'include/header.php';
         <div class="block">
             <form action="" method="post">
                 <div class="formfield">
-                    <label for="email">naam</label>
+                    <label for="email">Email</label>
                     <input id="email" type="text" name="email" value="<?= $email ?? '' ?>" />
                 </div>
 
