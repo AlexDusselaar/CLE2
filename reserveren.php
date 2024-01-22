@@ -13,21 +13,26 @@ $tijd = $_POST['tijd'];
 $vraag =htmlentities($_POST['vraag']);
 
 $errors = [];
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+    $errors['email'] = "vul een geldige email in";
+}
 if ($naam == "") {
-    $errors['game'] = "Vul aub een game naam in";
+    $errors['naam'] = "Vul aub uw naam in";
 }
 if ($datum == "") {
-    $errors['genre'] = "Vul aub game genre in";
+    $errors['datum'] = "kies aub een datum";
 }
 if ($tijd == "") {
-    $errors['link'] = "vul aub steam store link in";
+    $errors['tijd'] = "kies aub een tijd";
+}
+if ($vraag == "") {
+    $errors['vraag'] = "vul in wat uw wilt";
 }
 if (empty($errors)) {
     $query = "INSERT INTO reseveringen (naam, email, vraag, datum, tijd)
                     VALUES('$naam', '$email','$vraag', '$datum', '$tijd')";
     $result = mysqli_query($db, $query);
 }
-
 }
 ?>
 

@@ -1,13 +1,10 @@
 <?php
 session_start();
-$admin =false;
 if (!$_SESSION == ''){
     $email = $_SESSION['userEmail'];
-    if ($_SESSION['userid'] == 1 ){
-        $admin = true;
-    }
-    setcookie('admin', $admin);
-    setcookie('userEmail', $email)
+    $userID = $_SESSION['userid'];
+    setcookie('userEmail', $email);
+    setcookie('userid', $userID)
 ?>
 <!DOCTYPE html>
 <html lang="en">
