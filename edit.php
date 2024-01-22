@@ -35,8 +35,6 @@ if ($admin) {
 
 if (isset($_POST['submit'])) {
 
-
-    print_r($_POST);
     $name = htmlentities($_POST['naam']);
     $email = htmlentities($_POST['email']);
     $date = $_POST['datum'];
