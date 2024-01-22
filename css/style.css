@@ -156,6 +156,11 @@ header a:hover {
   max-width: 25vw;
 }
 
+#images img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
 @media (max-width: 480px) {
   .headerlogo {
     font-size:0.8rem;

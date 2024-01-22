@@ -6,11 +6,11 @@ require_once 'include/header.php';
 
         <section id="images">
             <div>
-                <img src="https://placehold.co/300x300" alt="placeholder">
-                <img src="https://placehold.co/300x300" alt="placeholder">
+                <img src="imgs/index1.png" alt="placeholder">
+                <img src="imgs/index4.png" alt="placeholder">
             </div>
-                <img src="https://placehold.co/300x300" alt="placeholder">
-                <img src="https://placehold.co/300x300" alt="placeholder">
+                <img src="imgs/index3.png" alt="placeholder">
+                <img src="imgs/index2.png" alt="placeholder">
             <div>
 
             </div>
