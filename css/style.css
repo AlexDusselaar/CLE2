@@ -381,6 +381,56 @@ tbody tr:nth-child(odd) {
   background-color: #dedede;
 }
 
+
+/* PORTFOLIO */
+#portfolio section {
+  display: flex;
+  padding: 2vw 10vw;
+}
+
+#portfolio section div {
+  padding: 1vw;
+}
+
+#portfolio section img {
+  padding: 1vw;
+  max-width: 40vw;
+  height: auto;
+}
+
+#reserveerbutton {
+  flex-direction: column;
+  align-items: center;
+}
+
+#logo {
+  justify-content: center;
+}
+
+#portfolio #logo div {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#logo div h1 {
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 4px;
+}
+
+#logo div h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+#portfolio #logo img {
+  width: auto;
+  height: 7vw;
+  padding: 0;
+}
+
 /* DARK MODE */
 @media (prefers-color-scheme: dark) {
   body {
@@ -396,6 +446,14 @@ tbody tr:nth-child(odd) {
 
   #images img {
     filter: invert(0);
+  }
+
+  #portfolio img {
+    filter: invert(0);
+  }
+
+  #logo img {
+    filter: invert(1);
   }
 
   footer {
