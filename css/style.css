@@ -157,6 +157,10 @@ header a:hover {
 }
 
 @media (max-width: 480px) {
+  .headerlogo {
+    font-size:0.8rem;
+  }
+
   #images img {
     max-height: 25vw;
   }
@@ -190,7 +194,7 @@ header a:hover {
   }
 
   .headerlogo img {
-    max-height: 20vw;
+    max-height: 15vw;
   }
 
 }
