@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
     if (empty($errors)) {
         $updateQuery = "UPDATE reseveringen SET naam='$name', datum='$date', tijd='$time', vraag='$vraag', email='$email' WHERE id='$index'";
         if (mysqli_query($db, $updateQuery)) {
-            echo '<script>alert("je resevering is geupdate")</script>';
+            echo '<script>alert("je resevering is geupdate")window.location.href="./reserveringen.php.php"</script>';
         }
     }
 }

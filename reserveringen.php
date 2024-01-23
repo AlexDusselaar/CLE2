@@ -14,19 +14,15 @@ if (!$_SESSION == ''){
 if ($admin) {
     $query = "SELECT * FROM reseveringen";
 
-    $result = mysqli_query($db, $query)
-    or die('Error ' . mysqli_error($db) . ' with query ' . $query);
-
 } else {
     $query = "SELECT * FROM reseveringen WHERE email='$email' ";
-
+}
     $result = mysqli_query($db, $query)
     or die('Error ' . mysqli_error($db) . ' with query ' . $query);
-}
+
     while ($row = mysqli_fetch_assoc($result)) {
         $reseveringen[] = $row;
     }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,7 +78,7 @@ if ($admin) {
                 <td>
                     <div>
                         <a href="edit.php?id=<?= $index + 1 ?>">edit</a>
-                        <a href="delete.php">delete</a>
+                        <a href=""<?= $delete = "DELETE FROM reseveringen WHERE id='$index'"?>>delete</a>
                     </div>
                 </td>
             </tr>

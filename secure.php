@@ -33,10 +33,10 @@ if (!$_SESSION == ''){
     <div class="flex">
 
         <section id="images">
-            <img src="https://placehold.co/300x300" alt="placeholder">
-            <img src="https://placehold.co/300x300" alt="placeholder">
-            <img src="https://placehold.co/300x300" alt="placeholder">
-            <img src="https://placehold.co/300x300" alt="placeholder">
+            <img src="./imgs/index1.png" alt="placeholder">
+            <img src="./imgs/index2.png" alt="placeholder">
+            <img src="./imgs/index3.png" alt="placeholder">
+            <img src="./imgs/index4.png" alt="placeholder">
         </section>
 
         <div class="flex1">
