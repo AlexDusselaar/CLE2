@@ -1,8 +1,6 @@
 <?php
 if (isset($_POST['submit'])) {
 
-    echo '<script>alert("je resevering is gemaakt");window.location.href="./index.php"</script>';
-
     /** @var mysqli $db */
     require_once "include/connection.php";
 
@@ -29,6 +27,8 @@ if ($vraag == "") {
     $errors['vraag'] = "vul in wat uw wilt";
 }
 if (empty($errors)) {
+    echo '<script>alert("je resevering is gemaakt");window.location.href="./index.php"</script>';
+
     $query = "INSERT INTO reseveringen (naam, email, vraag, datum, tijd)
                     VALUES('$naam', '$email','$vraag', '$datum', '$tijd')";
     $result = mysqli_query($db, $query);
