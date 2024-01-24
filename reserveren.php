@@ -97,7 +97,6 @@ if (empty($errors)) {
                             <option value=<?= $tijd ?? '15:00' ?>>15:00</option>
                             <option value=<?= $tijd ?? '15:30' ?>>15:30</option>
                             <option value=<?= $tijd ?? '16:00' ?>>16:00</option>
-                            <option value=<?= $tijd ?? '4:30' ?>>croissant</option>
                         </select>
                         <p>
                             <?= $errors['tijd'] ?? '' ?>
