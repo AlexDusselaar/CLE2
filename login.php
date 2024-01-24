@@ -1,5 +1,4 @@
 <?php
-$login = false;
 if (isset($_POST['submit'])) {
     /** @var mysqli $db */
     require_once 'include/connection.php';
@@ -58,6 +57,7 @@ require_once 'include/header.php';
                 </p>
 
                 <button class="button" type="submit" name="submit">Log in</button>
+<!--                <button class="button" type="submit" id="passwordReset" name="wachtwoord vergeten">wachtwoord vergeten?</button>-->
             </form>
             <h3>Of log in met:</h3>
             <!-- social media icons -->

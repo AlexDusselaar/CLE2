@@ -78,7 +78,7 @@ if ($admin) {
                 <td>
                     <div>
                         <a href="edit.php?id=<?= $index + 1 ?>">edit</a>
-                        <a href="include/delete.php?id=<?= $index + 1?>">delete</a>
+                        <a href="delete.php?id=<?= $index + 1?>">delete</a>
                     </div>
                 </td>
             </tr>
